@@ -10,6 +10,7 @@ import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 
+import { MovieComponent } from "./samples/movies/movie.component";
 import { SimpleFilmsComponent } from "./samples/simple-films/simple-films.component";
 import { SimpleFilms2Component } from "./samples/simple-films2/simple-films2.component";
 import { SimpleFilms3Component } from "./samples/simple-films3/simple-films3.component";
@@ -17,6 +18,7 @@ import { WikipediaComponent } from "./samples/wikipedia/wikipedia.component";
 
 import { SimpleFilms4Component } from "./samples/simple-films4/simple-films4.component";
 
+import { FilmService } from "./samples/movies/film.service";
 import { InMemoryDataService } from "./samples/in-memory-data.service";
 import { SwUrlService } from "./samples/sw-url.service";
 import { SimpleFilmsService } from "./samples/simple-films/simple-films.service";
@@ -27,14 +29,22 @@ import { WikipediaService } from "./samples/wikipedia.service";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { ErrorIsolationComponent } from "./samples/error-isolation/error-isolation.component";
+import { LeakyComponent } from "./samples/leaky-component/leaky.component";
+import { TimeService } from "./samples/time.service";
+import { TakeUntilComponent } from "./samples/take-until/take-until.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    ErrorIsolationComponent,
+    LeakyComponent,
+    MovieComponent,
     SimpleFilmsComponent,
     SimpleFilms2Component,
     SimpleFilms3Component,
     SimpleFilms4Component,
+    TakeUntilComponent,
     WikipediaComponent,
   ],
   imports: [
@@ -51,11 +61,13 @@ import { AppComponent } from "./app.component";
     ReactiveFormsModule,
   ],
   providers: [
+    FilmService,
     SwUrlService,
     SimpleFilmsService,
     SimpleFilmsService2,
     SimpleFilmsService3,
     SimpleFilmsService4,
+    TimeService,
     WikipediaService,
   ],
   bootstrap: [AppComponent],
