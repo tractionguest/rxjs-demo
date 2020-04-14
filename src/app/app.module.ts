@@ -33,6 +33,8 @@ import { ErrorIsolationComponent } from "./samples/error-isolation/error-isolati
 import { LeakyComponent } from "./samples/leaky-component/leaky.component";
 import { TimeService } from "./samples/time.service";
 import { TakeUntilComponent } from "./samples/take-until/take-until.component";
+import { MultiStreamService } from "./samples/multi-stream/multi-stream.service";
+import { MultiStreamComponent } from "./samples/multi-stream/multi-stream.component";
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { TakeUntilComponent } from "./samples/take-until/take-until.component";
     ErrorIsolationComponent,
     LeakyComponent,
     MovieComponent,
+    MultiStreamComponent,
     SimpleFilmsComponent,
     SimpleFilms2Component,
     SimpleFilms3Component,
@@ -62,6 +65,7 @@ import { TakeUntilComponent } from "./samples/take-until/take-until.component";
   ],
   providers: [
     FilmService,
+    MultiStreamService,
     SwUrlService,
     SimpleFilmsService,
     SimpleFilmsService2,

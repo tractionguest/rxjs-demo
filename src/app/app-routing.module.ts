@@ -10,6 +10,7 @@ import { SimpleFilms3Component } from "./samples/simple-films3/simple-films3.com
 import { SimpleFilms4Component } from "./samples/simple-films4/simple-films4.component";
 import { WikipediaComponent } from "./samples/wikipedia/wikipedia.component";
 import { TakeUntilComponent } from "./samples/take-until/take-until.component";
+import { MultiStreamComponent } from "./samples/multi-stream/multi-stream.component";
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: "take-until",
     component: TakeUntilComponent,
+  },
+  {
+    path: "multi-stream",
+    component: MultiStreamComponent,
   },
 ];
 
